@@ -1,9 +1,11 @@
 import { FC } from 'react'
-import styles from '../styles/common.module.scss'
+import styles from '~/styles/common.module.scss'
+import NavBar from '~/components/navbar'
+
 const Hero: FC = () => {
   return (
     <div className={styles.section}>
-      <h1>hello world</h1>
+      <NavBar />
     </div>
   )
 }

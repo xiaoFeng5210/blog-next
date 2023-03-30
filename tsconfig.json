@@ -23,9 +23,12 @@
       "~/*": [
         "./src/*"
       ],
-      // "~/styles/*": [
-      //   "./src/styles/*"
-      // ]
+      "pages/*": [
+        "./src/app/*"
+      ],
+      "ui/*": [
+        "./src/ui/*"
+      ],
     },
     "plugins": [
       {

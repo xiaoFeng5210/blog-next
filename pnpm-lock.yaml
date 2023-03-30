@@ -13,6 +13,7 @@ specifiers:
   eslint-config-next: 13.2.1
   eslint-plugin-react: ^7.32.2
   next: 13.2.1
+  next-transpile-modules: ^10.0.0
   react: 18.2.0
   react-dom: 18.2.0
   sass: ^1.60.0
@@ -42,6 +43,7 @@ devDependencies:
   cross-env: 7.0.3
   eslint: 8.34.0
   eslint-plugin-react: 7.32.2_eslint@8.34.0
+  next-transpile-modules: 10.0.0
   typescript-plugin-css-modules: 4.2.3_typescript@4.9.5
 
 packages:
@@ -836,7 +838,6 @@ packages:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
-    dev: false
 
   /errno/0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==}
@@ -1838,6 +1839,13 @@ packages:
     dev: true
     optional: true
 
+  /next-transpile-modules/10.0.0:
+    resolution: {integrity: sha512-FyeJ++Lm2Fq31gbThiRCrJlYpIY9QaI7A3TjuhQLzOix8ChQrvn5ny4MhfIthS5cy6+uK1AhDRvxVdW17y3Xdw==}
+    deprecated: All features of next-transpile-modules are now natively built-in Next.js 13.1. Please use Next's transpilePackages option :)
+    dependencies:
+      enhanced-resolve: 5.12.0
+    dev: true
+
   /next/13.2.1_ee3f03fb0aa0669d423a2555b1a3e778:
     resolution: {integrity: sha512-qhgJlDtG0xidNViJUPeQHLGJJoT4zDj/El7fP3D3OzpxJDUfxsm16cK4WTMyvSX1ciIfAq05u+0HqFAa+VJ+Hg==}
     engines: {node: '>=14.6.0'}
@@ -2456,7 +2464,6 @@ packages:
   /tapable/2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
-    dev: false
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
