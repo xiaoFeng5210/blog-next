@@ -20,8 +20,9 @@ const NavBar: FC = () => {
         </div>
         <div className={styles.icons}>
           <img src="/img/search.png" alt="" />
-          <button>Hire Now</button>
+          <button>搜索</button>
         </div>
+        <progress value='10' max='100' />
       </div>
     </div>
   )
