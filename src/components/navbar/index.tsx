@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from 'react'
 import styles from './navbar.module.scss'
 const NavBar: FC = () => {

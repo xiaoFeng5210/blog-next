@@ -1,7 +1,10 @@
 .section {
   display: flex;
   justify-content: center;
-
+  position: sticky;
+  background-color: black;
+  top: 0;
+  z-index: 1000;
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
@@ -83,9 +86,9 @@ $animation-duration: 0.6s;
         transform: scale(1.5);
       }
     }
-    &:active {
-      transform: scale(0.95);
-      transition: transform 0.3s;
-    }
+    // &:active {
+    //   transform: scale(0.95);
+    //   transition: transform 0.3s;
+    // }
   }
 }

@@ -3,7 +3,6 @@
 import { FC, Suspense, useRef } from 'react'
 import styles from '~/styles/common.module.scss'
 import heroStyles from '~/styles/hero.module.scss'
-import NavBar from '~/components/navbar'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
@@ -19,7 +18,6 @@ const Hero: FC = () => {
 
   return (
     <div className={styles.section}>
-      <NavBar />
       <div className={styles.container}>
         <div className={heroStyles.left}>
           <h1 className={heroStyles.title}>Introduction</h1>

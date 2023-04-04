@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import NavBar from '~/components/navbar'
 
 export const metadata = {
   title: '个人博客',
@@ -13,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
+        <NavBar />
         {children}
       </body>
     </html>
