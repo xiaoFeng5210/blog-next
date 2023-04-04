@@ -2,7 +2,7 @@
 
 import { FC, Suspense, useRef } from 'react'
 import styles from '~/styles/common.module.scss'
-import '~/styles/hero.scss'
+import heroStyles from '~/styles/hero.module.scss'
 import NavBar from '~/components/navbar'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
@@ -21,10 +21,10 @@ const Hero: FC = () => {
     <div className={styles.section}>
       <NavBar />
       <div className={styles.container}>
-        <div className='left'>
-          <h1 className="title">Introduction</h1>
+        <div className={heroStyles.left}>
+          <h1 className={heroStyles.title}>Introduction</h1>
         </div>
-        <div className="right">
+        <div className={heroStyles.right}>
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
@@ -43,7 +43,7 @@ const Hero: FC = () => {
               <ThreeFrame />
             </Suspense>
           </Canvas>
-          <img className='three_img' src="/img/moon.png" alt="/img/moon.png" />
+          <img className={heroStyles.three_img} src="/img/moon.png" alt="/img/moon.png" />
         </div>
       </div>
     </div>
