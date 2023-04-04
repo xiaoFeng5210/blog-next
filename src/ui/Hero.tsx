@@ -8,11 +8,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 const Hero: FC = () => {
-  const sphereRef = useRef<Sphere>();
+  const sphereRef = useRef<any>();
   function ThreeFrame() {
     useFrame(({ clock }) => {
-      sphereRef.current.rotation.x += 0.02;
-      sphereRef.current.rotation.y += 0.02;
+      sphereRef.current!.rotation.x += 0.02;
+      sphereRef.current!.rotation.y += 0.02;
     })
     return null
   }
