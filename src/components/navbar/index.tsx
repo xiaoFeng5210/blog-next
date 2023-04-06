@@ -1,6 +1,6 @@
 "use client"
 
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from './navbar.module.scss'
 const NavBar: FC = () => {
   return (
@@ -22,9 +22,10 @@ const NavBar: FC = () => {
           <img src="/img/search.png" alt="" />
           <button>搜索</button>
         </div>
-        <progress value='10' max='100' />
+        {/* <progress value={progress} max='100' /> */}
       </div>
     </div>
   )
 }
 export default NavBar
+

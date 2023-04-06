@@ -9,11 +9,11 @@ import Contact from '../ui/Contact'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <Hero />
       <Who />
       <Works />
       <Contact />
-    </main>
+    </div>
   )
 }

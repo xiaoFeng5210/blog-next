@@ -20,7 +20,7 @@ const Hero: FC = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={heroStyles.left}>
-          <h1 className={heroStyles.title}>Introduction</h1>
+          <span className={heroStyles.title}>Introduction</span>
         </div>
         <div className={heroStyles.right}>
           <Canvas>
