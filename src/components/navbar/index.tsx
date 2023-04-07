@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from 'react'
 import styles from './navbar.module.scss'
 const NavBar: FC = () => {
+
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -22,7 +23,7 @@ const NavBar: FC = () => {
           <img src="/img/search.png" alt="" />
           <button>搜索</button>
         </div>
-        {/* <progress value={progress} max='100' /> */}
+        <progress value='0' max='100' />
       </div>
     </div>
   )
