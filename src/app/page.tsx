@@ -6,8 +6,24 @@ import Hero from '../ui/Hero'
 import Who from '../ui/Who'
 import Contact from '../ui/Contact'
 
+type User = {
+  name: string
+  email: string
+  id: number
+}
+type Props = {
+  data: User[]
+}
 
-export default function Home() {
+const getData = async () => {
+  const res = await fetch(`${process.env.BASE_FETCH_URL}/api/user`, { method: 'GET' }).catch(err => { throw new Error(err) })
+  // if (!res.ok) throw new Error(res.statusText)
+  return res
+}
+
+
+const Home = async () => {
+  const users = await getData()
   return (
     <div className={styles.main}>
       <Hero />
@@ -17,3 +33,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
