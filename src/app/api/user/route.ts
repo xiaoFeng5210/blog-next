@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 import prisma from '../../../../prisma'
 
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
@@ -24,15 +25,9 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
 
 // 查询users接口
 export async function GET(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const users = await prisma.user.findMany();
-    if (!users) {
-      res.status(404).json({ error: 'No users found.' });
-    } else {
-      console.log(users);
-      res.status(200).json(users);
-    }
-  } catch (error) {
-    res.status(500).json({ error: 'Unable to fetch users' });
+  const users = await prisma.user.findMany().catch(err => (err))
+  if (users) {
+    const data = await users.json()
+    return NextResponse.json({ data })
   }
 }
