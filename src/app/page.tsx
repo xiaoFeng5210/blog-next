@@ -5,7 +5,6 @@ import Works from '../ui/Works'
 import Hero from '../ui/Hero'
 import Who from '../ui/Who'
 import Contact from '../ui/Contact'
-// import prisma from '../../prisma'
 
 type User = {
   name: string
@@ -17,10 +16,13 @@ type Props = {
 }
 
 const getData = async () => {
-  const res = await fetch(`${process.env.BASE_FETCH_URL}/api/user`, { method: 'GET' }).catch(err => { throw new Error(err) })
-  return res
+  const res = await fetch(`${process.env.BASE_FETCH_URL}/api/user`, {
+    method: 'GET', headers: {
+      'Content-Type': 'application/json'
+    },
+  }).catch(err => { throw new Error(err) })
+  return await res.json()
 }
-
 
 const Home = async () => {
   const users = await getData()

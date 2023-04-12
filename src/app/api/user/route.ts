@@ -2,6 +2,12 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 import prisma from '../../../../prisma'
 
+// 查询users接口
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  const users = await prisma.user.findMany().catch(err => (err))
+  return NextResponse.json(users)
+}
+
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
   const { email, name } = req.body;
 
@@ -17,17 +23,10 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
       },
     });
 
-    return res.status(201).json(newUser);
+    return res.status(200).json(newUser);
   } catch (error) {
     return res.status(500).json({ error: 'An error occurred while creating user.' });
   }
 }
 
-// 查询users接口
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
-  const users = await prisma.user.findMany().catch(err => (err))
-  if (users) {
-    const data = await users.json()
-    return NextResponse.json({ data })
-  }
-}
+
