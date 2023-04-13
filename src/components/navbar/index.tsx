@@ -10,11 +10,17 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
 
+
 const NavBar: FC = () => {
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
     name: '',
     email: ''
+  })
+  const [snackbar, setSnackbar] = useState({
+    vertical: 'top',
+    horizontal: 'center',
+    open: false
   })
   const handleClose = () => {
     setOpen(false);
@@ -35,8 +41,29 @@ const NavBar: FC = () => {
     })
   }
 
+  const login = async () => {
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    }).catch((err) => {
+      throw new Error(err)
+    })
+    if (response.ok) {
+      const { token } = await response.json()
+      sessionStorage.setItem('token', token)
+      handleClose()
+    } else {
+      setSnackbar({
+        ...snackbar,
+        open: true
+      })
+    }
+  }
+
   return (
     <div className={styles.section}>
+
       <div className={styles.container}>
         <div className={styles.links}>
           <img className={styles.logo} src="/img/logo.png" alt="" />
@@ -87,7 +114,7 @@ const NavBar: FC = () => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>取消</Button>
-          <Button onClick={handleClose}>登录</Button>
+          <Button onClick={login}>登录</Button>
         </DialogActions>
       </Dialog>
     </div>
