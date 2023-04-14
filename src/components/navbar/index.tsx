@@ -1,5 +1,5 @@
 "use client"
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import styles from './navbar.module.scss'
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -8,19 +8,15 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
-
-
+import SnackAlert from '../snackbar';
+import type { SnackAlertMethods } from '../snackbar'
 
 const NavBar: FC = () => {
+  const snackAlertRef = useRef<SnackAlertMethods>(null)
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
     name: '',
     email: ''
-  })
-  const [snackbar, setSnackbar] = useState({
-    vertical: 'top',
-    horizontal: 'center',
-    open: false
   })
   const handleClose = () => {
     setOpen(false);
@@ -51,13 +47,14 @@ const NavBar: FC = () => {
     })
     if (response.ok) {
       const { token } = await response.json()
-      sessionStorage.setItem('token', token)
+      if (token) {
+        sessionStorage.setItem('token', token)
+      } else {
+        snackAlertRef.current?.handleOpen({ content: '登录失败', severity: 'error' })
+      }
       handleClose()
     } else {
-      setSnackbar({
-        ...snackbar,
-        open: true
-      })
+      snackAlertRef.current?.handleOpen({ content: '登录失败', severity: 'error' })
     }
   }
 
@@ -116,7 +113,9 @@ const NavBar: FC = () => {
           <Button onClick={handleClose}>取消</Button>
           <Button onClick={login}>登录</Button>
         </DialogActions>
+        <SnackAlert ref={snackAlertRef} />
       </Dialog>
+
     </div>
   )
 }
