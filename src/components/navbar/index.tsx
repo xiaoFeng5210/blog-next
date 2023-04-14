@@ -66,7 +66,7 @@ const NavBar: FC = () => {
           <img className={styles.logo} src="/img/logo.png" alt="" />
           <ul className={styles.list}>
             {
-              ['Home', 'Blog', 'Works', 'Contact'].map((item, index) => {
+              ['主页', '作品', '个人介绍'].map((item, index) => {
                 return (
                   <li className={styles.list_item} key={index}>{item}</li>
                 )
@@ -85,7 +85,7 @@ const NavBar: FC = () => {
         <DialogTitle>登录</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            个人博客，如果想要账号，请联系我
+            个人博客，如果想要账号，请联系我804875728@qq.com
           </DialogContentText>
           <TextField
             required
