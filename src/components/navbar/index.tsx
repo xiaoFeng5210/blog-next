@@ -9,7 +9,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import SnackAlert from '../snackbar';
-import type { SnackAlertMethods } from '../snackbar'
+import type { SnackAlertMethods } from '../snackbar';
 
 const NavBar: FC = () => {
   const snackAlertRef = useRef<SnackAlertMethods>(null)
@@ -66,7 +66,7 @@ const NavBar: FC = () => {
           <img className={styles.logo} src="/img/logo.png" alt="" />
           <ul className={styles.list}>
             {
-              ['主页', '作品', '个人介绍'].map((item, index) => {
+              ['主页', '动效作品', '2d作品', '3d作品', '个人介绍'].map((item, index) => {
                 return (
                   <li className={styles.list_item} key={index}>{item}</li>
                 )
