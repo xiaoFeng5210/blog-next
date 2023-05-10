@@ -15,17 +15,16 @@ type Props = {
   data: User[]
 }
 
-const getData = async () => {
-  const res = await fetch(`${process.env.BASE_FETCH_URL}/api/user`, {
-    method: 'GET', headers: {
-      'Content-Type': 'application/json'
-    },
-  }).catch(err => { throw new Error(err) })
-  return await res.json()
-}
+// const getData = async () => {
+//   const res = await fetch(`${process.env.BASE_FETCH_URL}/api/user`, {
+//     method: 'GET', headers: {
+//       'Content-Type': 'application/json'
+//     },
+//   }).catch(err => { throw new Error(err) })
+//   return await res.json()
+// }
 
 const Home = async () => {
-  const users = await getData()
   return (
     <div className={styles.main}>
       <Hero />
