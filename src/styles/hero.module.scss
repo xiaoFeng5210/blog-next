@@ -7,6 +7,9 @@
   font-size: 1.5rem;
   // color: var(--font-akring-color);
   color: rgb(var(--foreground-rgb));
+  p {
+    word-break: break-all;
+  }
 
   @media only screen and (max-width: 768px) {
     flex: 1;

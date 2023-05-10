@@ -4,8 +4,9 @@ import styles from '~/styles/common.module.scss'
 import heroStyles from '~/styles/hero.module.scss'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import type { NextPage } from 'next'
 
-const ThreeRender = () => {
+const ThreeRender: FC = () => {
   const sphereRef = useRef<any>();
   function ThreeFrame() {
     useFrame(({ clock }) => {
@@ -36,13 +37,13 @@ const ThreeRender = () => {
   )
 }
 
-const Hero: FC = () => {
+const Hero: NextPage = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={heroStyles.left}>
           <span className={heroStyles.title}>Introduction</span>
-          <p>一个前端开发者</p>
+          <p>一个前端开发者, 擅长vue3, react, threejs, canvas, 热爱技术, 喜欢钻研</p>
         </div>
         <div className={heroStyles.right}>
           <ThreeRender />
