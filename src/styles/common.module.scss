@@ -1,11 +1,13 @@
 .section {
   height: 100vh;
   // scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
 }
 .container {
   height: 100%;
   // scroll-snap-align: center;
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
 

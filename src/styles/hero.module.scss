@@ -4,6 +4,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  font-size: 1.5rem;
+  // color: var(--font-akring-color);
+  color: rgb(var(--foreground-rgb));
 
   @media only screen and (max-width: 768px) {
     flex: 1;
