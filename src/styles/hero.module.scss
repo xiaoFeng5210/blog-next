@@ -1,4 +1,4 @@
-.left {
+s.left {
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   // color: var(--font-akring-color);
   color: rgb(var(--foreground-rgb));
   p {
-    word-break: break-all;
+    // word-break: break-all;
   }
 
   @media only screen and (max-width: 768px) {

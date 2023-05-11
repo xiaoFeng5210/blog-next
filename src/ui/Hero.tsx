@@ -17,7 +17,7 @@ const ThreeRender: FC = () => {
   }
   return (
     <Canvas>
-      <Suspense fallback={null}>
+      <Suspense fallback={<div>Loading...</div>}>
         <OrbitControls enableZoom={false} />
         {/* eslint-disable-next-line react/no-unknown-property */}
         <ambientLight intensity={1} />
@@ -43,7 +43,7 @@ const Hero: NextPage = () => {
       <div className={styles.container}>
         <div className={heroStyles.left}>
           <span className={heroStyles.title}>Introduction</span>
-          <p>一个前端开发者, 擅长vue3, react, threejs, canvas, 热爱技术, 喜欢钻研</p>
+          <p>A front-end developer, good at vue3, react, threejs, canvas, loves front-end, likes to delve into new technologies, and tries to do and participate in some open source projects</p>
         </div>
         <div className={heroStyles.right}>
           <ThreeRender />
