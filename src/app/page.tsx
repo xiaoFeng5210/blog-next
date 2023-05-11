@@ -26,12 +26,16 @@ type Props = {
 
 const Home = async () => {
   return (
-    <div className={styles.main}>
-      <Hero />
-      <Who />
-      <Works />
-      <Contact />
-    </div>
+    <>
+      <div className="cursor-pointer text-2xl">测试文件</div>
+      <div className={styles.main}>
+        <Hero />
+        <Who />
+        <Works />
+        <Contact />
+      </div>
+    </>
+
   )
 }
 

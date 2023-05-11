@@ -7,7 +7,7 @@ const Who: FC = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={WhoStyles.left}>
-          <span className='font-bold text-2xl'>What I do</span>
+          <span className="cursor-pointer">What I do</span>
         </div>
       </div>
     </div>
