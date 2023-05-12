@@ -1,17 +1,28 @@
-import { FC } from 'react'
+"use client"
+import { FC, useState } from 'react'
 import styles from '../styles/common.module.scss'
 import WhoStyles from '../styles/hero.module.scss'
 import newStyles from '~/styles/who.module.scss'
-import Image from 'next/image'
+import { worksLocale } from '~/local/baseData'
+import type { NextPage } from 'next/types'
 
+interface WorkContentProps {
+  title: string
+  desc: string
+  image?: string
+}
 
-const Who: FC = () => {
-  const works = [
-    {
-      title: 'vue3',
-      desc: '使用vue3开发项目',
-    }
-  ]
+const WorkContent: FC<WorkContentProps> = ({ title, desc, image }) => {
+  return (
+    <div className={newStyles.work_item_content}>
+      <div className={newStyles.work_item_title}>{title}</div>
+      <div className={newStyles.work_item_desc}>{desc}</div>
+    </div>
+  )
+}
+
+const Who: NextPage = () => {
+  const [works, setWorkItems] = useState(worksLocale)
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -21,8 +32,8 @@ const Who: FC = () => {
             {
               works.map((item, index) => {
                 return (
-                  <div key={index} className={newStyles.work_item}>
-
+                  <div key={index} style={{ backgroundImage: `url('${item.image}')` }} className={newStyles.work_item}>
+                    <WorkContent {...item} />
                   </div>
                 )
               })

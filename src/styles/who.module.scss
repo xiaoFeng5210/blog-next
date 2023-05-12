@@ -10,7 +10,25 @@
   width: 100%;
   height: 13rem;
   border-radius: 8px;
-  background: url("/img/code1.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.work_item_content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem 1rem 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.work_item_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.work_item_desc {
+  font-size: 1rem;
 }
