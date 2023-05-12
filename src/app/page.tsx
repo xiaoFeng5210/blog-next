@@ -23,7 +23,6 @@ const Home = async () => {
         <Contact />
       </div>
     </>
-
   )
 }
 
