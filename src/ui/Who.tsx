@@ -12,7 +12,7 @@ interface WorkContentProps {
   image?: string
 }
 
-const WorkContent: FC<WorkContentProps> = ({ title, desc, image }) => {
+const WorkContent: FC<WorkContentProps> = ({ title, desc }) => {
   return (
     <div className={newStyles.work_item_content}>
       <div className={newStyles.work_item_title}>{title}</div>
