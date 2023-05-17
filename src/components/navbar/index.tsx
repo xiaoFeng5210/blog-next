@@ -13,15 +13,8 @@ const useScroll = (handle: HandleScroll) => {
   const handleScroll = (e: Event) => {
     // 获取当前滚动的垂直位置
     const scrollTop = document.documentElement.scrollTop;
-    console.log(scrollTop)
     // 检查滚动位置，根据需要进行样式变化
-    if (scrollTop > 0) {
-      // 滚动时显示背景效果
-      handle(true)
-    } else {
-      // 滚动到顶部时恢复初始样式
-      handle(false)
-    }
+    handle(scrollTop > 0)
   }
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
