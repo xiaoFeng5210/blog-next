@@ -13,7 +13,6 @@ type User = {
 type Props = {
   data: User[]
 }
-
 const Home = async () => {
   return (
     <>

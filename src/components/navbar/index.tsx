@@ -7,7 +7,6 @@ const getNames = () => {
   return ['主页', '动效作品', '2d作品', '3d作品', '个人介绍']
 }
 
-
 const useScroll = (handle: HandleScroll) => {
   const backdrop = useRef(null)
   const handleScroll = (e: Event) => {
