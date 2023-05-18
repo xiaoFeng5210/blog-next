@@ -9,12 +9,14 @@ $animation-duration: 0.6s;
   background-color: #f2f7ff;
   top: 0;
   z-index: 1000;
+  transition: all 0.4s ease-in-out;
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
 }
 .container {
   width: 100vw;
+  height: 60px;
   padding: 10px 100px;
   display: flex;
   justify-content: space-between;
@@ -70,6 +72,19 @@ $animation-duration: 0.6s;
       cursor: pointer;
       color: #394e6a;
       font-size: 16px;
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #da4ea2;
+        transition: width 0.3s;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -112,9 +127,5 @@ $animation-duration: 0.6s;
         transform: scale(1.5);
       }
     }
-    // &:active {
-    //   transform: scale(0.95);
-    //   transition: transform 0.3s;
-    // }
   }
 }
