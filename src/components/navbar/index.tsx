@@ -69,7 +69,6 @@ const ProgressBar: FC = () => {
   return (!(progress === 0))
     ? <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
     : <></>
-  // return <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
 }
 export default NavBar
 
