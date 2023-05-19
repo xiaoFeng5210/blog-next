@@ -48,9 +48,28 @@ const NavBar: FC = () => {
             }
           </ul>
         </div>
+        <ProgressBar />
       </div>
     </div>
   )
+}
+
+const ProgressBar: FC = () => {
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(scrollPosition / totalHeight)
+      setProgress((scrollPosition / totalHeight) * 100);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  })
+  return (!(progress === 0))
+    ? <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
+    : <></>
+  // return <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
 }
 export default NavBar
 
