@@ -59,7 +59,7 @@ $animation-duration: 0.6s;
     font-weight: 700;
     line-height: 100%;
     font-family: var(--font-akring);
-    color: #394e6a;
+    color: #cc302b;
   }
   .list {
     display: flex;
@@ -78,7 +78,7 @@ $animation-duration: 0.6s;
         display: block;
         width: 0;
         height: 2px;
-        background: #394e6a;
+        background: #cc302b;
         transition: width 0.3s;
       }
       &:hover {

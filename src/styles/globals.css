@@ -1,6 +1,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --another-color: #CC302B
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -87,8 +88,6 @@ body {
   font-family:var(--font-akring);
   color: #394E6A;
   background: var(--font-akring-color);
-  /* overflow: auto;
-  scroll-behavior: smooth; */
 }
 
 body {
