@@ -24,6 +24,24 @@ const useScroll = (handle: HandleScroll) => {
   return { backdrop, handleScroll }
 }
 
+const ProgressBar: FC = () => {
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(scrollPosition / totalHeight)
+      setProgress((scrollPosition / totalHeight) * 100);
+    }
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [])
+  return (!(progress === 0))
+    ? <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
+    : <></>
+}
+
 const NavBar: FC = () => {
   const [isShowBackdrop, setIsShowBackdrop] = useState(false)
   const { backdrop } = useScroll(setIsShowBackdrop)
@@ -52,23 +70,6 @@ const NavBar: FC = () => {
       </div>
     </div>
   )
-}
-
-const ProgressBar: FC = () => {
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(scrollPosition / totalHeight)
-      setProgress((scrollPosition / totalHeight) * 100);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  })
-  return (!(progress === 0))
-    ? <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
-    : <></>
 }
 export default NavBar
 
