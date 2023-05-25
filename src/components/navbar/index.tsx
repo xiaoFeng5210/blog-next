@@ -30,7 +30,6 @@ const ProgressBar: FC = () => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(scrollPosition / totalHeight)
       setProgress((scrollPosition / totalHeight) * 100);
     }
     handleScroll();
