@@ -22,7 +22,7 @@ const WorkContent: FC<WorkContentProps> = ({ title, desc }) => {
 }
 
 const Who: NextPage = () => {
-  const [works, setWorkItems] = useState(worksLocale)
+  const [works] = useState(worksLocale)
   return (
     <div className={styles.section}>
       <div className={styles.container}>
