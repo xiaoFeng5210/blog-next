@@ -23,7 +23,7 @@ const ThreeRender: FC = () => {
         <ambientLight intensity={1} />
         {/* eslint-disable-next-line react/no-unknown-property */}
         <directionalLight position={[3, 2, 1]} />
-        <Sphere ref={sphereRef} args={[1, 100, 200]} scale={2.4}>
+        <Sphere ref={sphereRef} args={[1, 90, 100]} scale={2.4}>
           <MeshDistortMaterial
             color="#394E6A"
             attach="material"
