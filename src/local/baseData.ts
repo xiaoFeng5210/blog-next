@@ -15,3 +15,41 @@ export const worksLocale = [
     image: '/img/effect1.jpg'
   }
 ]
+
+export const bubbleList = [
+  {
+    "name": "20200813_20200807_20200813_1",
+    "text": 'vue3',
+    "value": 'canvas'
+  },
+  {
+    "name": "20200813_20200807_20200813_2",
+    "text": 'react',
+    "value": 89
+  },
+  {
+    "name": "20200813_20200807_20200813_3",
+    "text": 'canvas',
+    "value": 33
+  },
+  {
+    "name": "20200813_20200807_20200813_4",
+    "text": 'threejs',
+    "value": 22
+  },
+  {
+    "name": "20200813_20200807_20200813_6",
+    "text": 'd3js',
+    "value": 9
+  },
+  {
+    "name": "20200813_20200807_20200813_7",
+    "text": '工程化',
+    "value": 18
+  },
+  {
+    "name": "20200813_20200807_20200813_8",
+    "text": '音频技术',
+    "value": 5
+  },
+]
