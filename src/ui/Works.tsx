@@ -29,7 +29,9 @@ const Works: FC = () => {
     const scale = d3.scaleLinear([min, max], [16, 40])
     const scaleFontSize = d3.scaleLinear([min, max], [20, 38])
     const scaleCategory = d3.scaleLinear([min, max], [0, COLOR.length - 1])
-
+    const color = (value: number) => {
+      return COLOR[Math.floor(scaleCategory(value))]
+    }
   }
   return (
     <div className={styles.section}>
