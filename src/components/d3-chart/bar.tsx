@@ -19,7 +19,9 @@ const component: FC<Props> = (props) => {
       .range([height - padding.top - padding.bottom, 0])
     const xAxis = d3.axisBottom(xScale)
     const yAxis = d3.axisLeft(yScale)
-
+    const rects = svg.selectAll('rect').data(dataset).enter().append('rect')
+      .attr('class', "MyRect").attr('transform', `translate(${padding.left},${padding.top})`)
+      .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number)
   }
   return (
     <div id={`d3_show_chart${index}`} className="d3_show_chart w-[100%] h-[100%]" />
