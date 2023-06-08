@@ -2,8 +2,10 @@
 import { FC, useEffect, useState } from 'react'
 import styles from '../styles/common.module.scss'
 import '../styles/works.scss'
-import * as d3 from 'd3'
 import { bubbleList, d3Tabs } from '../local/baseData'
+import Bar from '../components/d3-chart/bar'
+
+const d3ChartComponents = [Bar]
 
 const Works: FC = () => {
   const [selectKey, setSelectKey] = useState(0)
@@ -20,18 +22,7 @@ const Works: FC = () => {
     const height = document.getElementById('d3_show_box')?.offsetHeight
     return { width, height }
   }
-  // const drawBubble = () => {
-  //   const COLOR = ['#4B0082', '#9932CC', '#9400D3', '#BA55D3']
-  //   const values = bubbleList.map(item => item.value as number)
-  //   const max = Math.max(...values)
-  //   const min = Math.min(...values)
-  //   const scale = d3.scaleLinear([min, max], [16, 40])
-  //   const scaleFontSize = d3.scaleLinear([min, max], [20, 38])
-  //   const scaleCategory = d3.scaleLinear([min, max], [0, COLOR.length - 1])
-  //   const color = (value: number) => {
-  //     return COLOR[Math.floor(scaleCategory(value))]
-  //   }
-  // }
+
   return (
     <div className={styles.section}>
       <div className='works_box'>
@@ -46,15 +37,37 @@ const Works: FC = () => {
               }
             </div>
           </div>
-
           {/* 显示内容 */}
           <div id='d3_show_box' className="d3_content w-[100%] h-[100%]">
-
+            {switchComponent(selectKey, d3viewBox)}
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+const switchComponent = (index: number, d3viewBox: { width: number, height: number }) => {
+  const Component = d3ChartComponents[index]
+  return Component ? <Component d3viewBox={d3viewBox} index={index} /> : <></>
+}
+
 export default Works
+
+
+
+
+
+// const drawBubble = () => {
+  //   const COLOR = ['#4B0082', '#9932CC', '#9400D3', '#BA55D3']
+  //   const values = bubbleList.map(item => item.value as number)
+  //   const max = Math.max(...values)
+  //   const min = Math.min(...values)
+  //   const scale = d3.scaleLinear([min, max], [16, 40])
+  //   const scaleFontSize = d3.scaleLinear([min, max], [20, 38])
+  //   const scaleCategory = d3.scaleLinear([min, max], [0, COLOR.length - 1])
+  //   const color = (value: number) => {
+  //     return COLOR[Math.floor(scaleCategory(value))]
+  //   }
+  // }
 
