@@ -16,6 +16,43 @@ export const worksLocale = [
   }
 ]
 
+export const d3Tabs = [
+  {
+    title: '前端框架',
+    key: 0
+  },
+  {
+    title: '可视化',
+    key: 1
+  },
+
+  {
+    title: '工程化',
+    key: 2
+  },
+  {
+    title: '后端',
+    key: 3
+  }
+]
+
+export const d3BarList = [{
+  name: 'vue3',
+  value: 85
+}, {
+  name: 'react18',
+  value: 80,
+}, {
+  name: 'angular',
+  value: 50
+}, {
+  name: 'jquery',
+  value: 85,
+}, {
+  name: 'miniprogram',
+  value: 75
+}]
+
 export const bubbleList = [
   {
     "name": "20200813_20200807_20200813_1",
