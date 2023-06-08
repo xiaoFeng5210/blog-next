@@ -19,6 +19,9 @@ const component: FC<Props> = (props) => {
       .range([height - padding.top - padding.bottom, 0])
     const xAxis = d3.axisBottom(xScale)
     const yAxis = d3.axisLeft(yScale)
+    // 添加x y轴
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${height - padding.bottom})`).call(xAxis)
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${padding.top})`).call(yAxis)
     const rects = svg.selectAll('rect').data(dataset).enter().append('rect')
       .attr('class', "MyRect").attr('transform', `translate(${padding.left},${padding.top})`)
       .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number)
