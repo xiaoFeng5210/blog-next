@@ -29,11 +29,16 @@ const Bar: FC<Props> = (props) => {
       .attr('class', "MyRect").attr('transform', `translate(${padding.left + 20},${padding.top})`)
       .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number)
       .attr('width', Math.abs(xScale.bandwidth() - 50)).attr('height', d => Math.abs(height - padding.top - padding.bottom - yScale(d)))
-      .attr('fill', '#69A2B2')
-    svg.selectAll('text').data(dataset).enter().append('text')
-      .attr('class', 'MyText').attr('transform', `translate(${padding.left + 20},${padding.top})`)
-      .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number - 10)
-      .attr('stroke', 'green').text(d => d)
+      .attr('fill', '#69A2B2');
+    // 添加文字
+    svg.selectAll('.MyText').data(dataset).enter().append('text').attr('class', 'MyText')
+      .attr('transform', `translate(${padding.left + 20},${padding.top})`)
+      .attr('x', (d, i) => xScale(d3BarList[i].name) as number + Math.abs(xScale.bandwidth()) / 2)
+      .attr('y', d => yScale(d) as number)
+      .attr('dx', () => (Math.abs(xScale.bandwidth()) / 2) - 40)
+      .attr('dy', () => 40)
+      .text(d => d)
+      .attr('fill', 'red')
 
 
   }
