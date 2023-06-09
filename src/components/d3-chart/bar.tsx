@@ -26,8 +26,16 @@ const Bar: FC<Props> = (props) => {
     svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${height - padding.bottom})`).call(xAxis)
     svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${padding.top})`).call(yAxis)
     const rects = svg.selectAll('rect').data(dataset).enter().append('rect')
-      .attr('class', "MyRect").attr('transform', `translate(${padding.left},${padding.top})`)
+      .attr('class', "MyRect").attr('transform', `translate(${padding.left + 20},${padding.top})`)
       .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number)
+      .attr('width', Math.abs(xScale.bandwidth() - 50)).attr('height', d => Math.abs(height - padding.top - padding.bottom - yScale(d)))
+      .attr('fill', '#69A2B2')
+    svg.selectAll('text').data(dataset).enter().append('text')
+      .attr('class', 'MyText').attr('transform', `translate(${padding.left + 20},${padding.top})`)
+      .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number - 10)
+      .attr('stroke', 'green').text(d => d)
+
+
   }
   return (
     <div id={`d3_show_chart${index}`} className="d3_show_chart w-[100%] h-[100%]" />
