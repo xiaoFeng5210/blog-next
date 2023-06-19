@@ -26,19 +26,19 @@ const Bar: FC<Props> = (props) => {
     svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${height - padding.bottom})`).call(xAxis)
     svg.append('g').attr('class', 'axis').attr('transform', `translate(${padding.left},${padding.top})`).call(yAxis)
     const rects = svg.selectAll('rect').data(dataset).enter().append('rect')
-      .attr('class', (d, i) => `my_rect${i}`).attr('transform', `translate(${padding.left + 20},${padding.top})`)
+      .attr('class', (d, i) => `my_rect${i}`).attr('transform', `translate(${padding.left + 50},${padding.top})`)
       .attr('x', (d, i) => xScale(d3BarList[i].name) as number).attr('y', d => yScale(d) as number)
-      .attr('width', Math.abs(xScale.bandwidth() - 50)).attr('height', d => Math.abs(height - padding.top - padding.bottom - yScale(d)))
+      .attr('width', Math.abs(xScale.bandwidth() - 110)).attr('height', d => Math.abs(height - padding.top - padding.bottom - yScale(d)))
       .attr('fill', '#69A2B2');
     // 添加文字
     svg.selectAll('.MyText').data(dataset).enter().append('text').attr('class', 'MyText')
       .attr('transform', `translate(${padding.left + 20},${padding.top})`)
       .attr('x', (d, i) => xScale(d3BarList[i].name) as number + Math.abs(xScale.bandwidth()) / 2)
       .attr('y', d => yScale(d) as number)
-      .attr('dx', () => (Math.abs(xScale.bandwidth()) / 2) - 40)
+      .attr('dx', () => (Math.abs(xScale.bandwidth()) / 2) - 180)
       .attr('dy', () => 40)
       .text(d => d)
-      .attr('fill', 'red')
+      .attr('fill', 'blue')
   }
   return (
     <div id={`d3_show_chart${index}`} className="d3_show_chart w-[100%] h-[100%]" />
