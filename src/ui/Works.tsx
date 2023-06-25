@@ -54,20 +54,3 @@ const switchComponent = (index: number, d3viewBox: { width: number, height: numb
 
 export default Works
 
-
-
-
-
-// const drawBubble = () => {
-  //   const COLOR = ['#4B0082', '#9932CC', '#9400D3', '#BA55D3']
-  //   const values = bubbleList.map(item => item.value as number)
-  //   const max = Math.max(...values)
-  //   const min = Math.min(...values)
-  //   const scale = d3.scaleLinear([min, max], [16, 40])
-  //   const scaleFontSize = d3.scaleLinear([min, max], [20, 38])
-  //   const scaleCategory = d3.scaleLinear([min, max], [0, COLOR.length - 1])
-  //   const color = (value: number) => {
-  //     return COLOR[Math.floor(scaleCategory(value))]
-  //   }
-  // }
-
