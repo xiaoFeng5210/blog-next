@@ -1,5 +1,5 @@
 "use client"
-import { FC, useState } from 'react'
+import { CSSProperties, FC, useState } from 'react'
 import styles from '../styles/common.module.scss'
 import WhoStyles from '../styles/hero.module.scss'
 import newStyles from '~/styles/who.module.scss'
@@ -23,6 +23,9 @@ const WorkContent: FC<WorkContentProps> = ({ title, desc }) => {
 
 const Who: NextPage = () => {
   const [works] = useState(worksLocale)
+  function scaleAnimate() {
+    
+  }
   return (
     <div className={styles.section}>
       <div className={styles.container}>
@@ -32,9 +35,9 @@ const Who: NextPage = () => {
             {
               works.map((item, index) => {
                 return (
-                  <div key={index} style={{ backgroundImage: `url('${item.image}')` }} className={newStyles.work_item}>
-                    <WorkContent {...item} />
-                  </div>
+                    <div key={index} style={{ backgroundImage: `url('${item.image}')` }} className={newStyles.work_item}>
+                      <WorkContent {...item} />
+                    </div>
                 )
               })
             }
