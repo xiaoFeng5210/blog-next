@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import NavBar from '~/components/navbar'
+import 'animate.css';
 
 export const metadata = {
   title: '个人博客',

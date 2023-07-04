@@ -6,6 +6,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import type { NextPage } from 'next'
 
+
 const ThreeRender: FC = () => {
   const sphereRef = useRef<any>();
   function ThreeFrame() {
@@ -42,8 +43,8 @@ const Hero: NextPage = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={heroStyles.left}>
-          <span className={heroStyles.title}>Introduction</span>
-          <p>A front-end developer, good at vue3, react, threejs, canvas, loves front-end, likes to delve into new technologies, and tries to do and participate in some open source projects</p>
+          <span className={`${heroStyles.title} animate__animated animate__bounce`}>👋嗨, 我是张庆风</span>
+          <p className='animate__animated animate__backInLeft'>A front-end developer, good at vue3, react, threejs, canvas, loves front-end, likes to delve into new technologies, and tries to do and participate in some open source projects</p>
         </div>
         <div className={heroStyles.right}>
           <ThreeRender />
