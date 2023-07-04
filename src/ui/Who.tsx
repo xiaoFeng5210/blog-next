@@ -23,9 +23,6 @@ const WorkContent: FC<WorkContentProps> = ({ title, desc }) => {
 
 const Who: NextPage = () => {
   const [works] = useState(worksLocale)
-  function scaleAnimate() {
-    
-  }
   return (
     <div className={styles.section}>
       <div className={styles.container}>
