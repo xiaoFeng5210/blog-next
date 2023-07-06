@@ -1,5 +1,10 @@
 export const menus = [
   {
+    title: '首页',
+    key: 'home',
+    route: '/',
+  },
+  {
     title: '博客',
     key: 'blog',
     route: '/blog',
