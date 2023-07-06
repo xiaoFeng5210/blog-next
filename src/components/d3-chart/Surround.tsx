@@ -8,8 +8,7 @@ interface Props {
   d3viewBox: { width: number, height: number }
   index: number
 }
-const Surround: FC<Props> = (props) => {
-  const { width, height } = props.d3viewBox
+const Surround: FC<Props> = () => {
   const surroundBoxStyles = () => ({
     ['--margin-top']: `${randomNum(-50, 40)}vh`,
     ['--margin-left']: `${randomNum(8, 30)}vw`,

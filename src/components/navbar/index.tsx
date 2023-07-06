@@ -2,11 +2,10 @@
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './navbar.module.scss'
 import {menus} from '../../local/menu'
+import Link from 'next/link'
+import type { UrlObject } from 'url'
 
 type HandleScroll = (e: boolean) => void
-const getWorks = {
-
-}
 
 const useScroll = (handle: HandleScroll) => {
   const backdrop = useRef(null)
@@ -37,7 +36,7 @@ const ProgressBar: FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [])
-  return (!(progress === 0))
+  return (!isNaN(progress) && !(progress === 0))
     ? <progress value={progress} max="100" style={{ width: '100%', height: '5px' }} />
     : <></>
 }
@@ -60,7 +59,7 @@ const NavBar: FC = () => {
             {
               menus.map((item, index) => {
                 return (
-                  <li className={styles.list_item} key={index}>{item.title}</li>
+                  <li className={styles.list_item} key={index}><Link href={item.route as any}>{item.title}</Link></li>
                 )
               })
             }
