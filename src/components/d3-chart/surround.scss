@@ -1,0 +1,32 @@
+.demo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 200px);
+  perspective: 1000px;
+}
+
+.box, .tag {
+  position: absolute;
+  font-size: 1.5em;
+  transform-style: preserve-3d;
+  animation: rotY 0s linear infinite;
+  animation-duration: var(--animation-duration);
+  animation-delay: var(--animation-delay);
+}
+
+.box {
+  margin-top: var(--margin-top)
+}
+
+.tag {
+  margin-left: var(--margin-left);
+  animation-direction: reverse;
+}
+
+@keyframes rotY {
+  to {
+    transform: rotateY(1turn);
+  }
+} 

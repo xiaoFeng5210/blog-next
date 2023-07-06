@@ -1,10 +1,11 @@
 "use client"
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import styles from './navbar.module.scss'
+import {menus} from '../../local/menu'
 
 type HandleScroll = (e: boolean) => void
-const getNames = () => {
-  return ['主页', '动效作品', '2d作品', '3d作品', '个人介绍']
+const getWorks = {
+
 }
 
 const useScroll = (handle: HandleScroll) => {
@@ -57,9 +58,9 @@ const NavBar: FC = () => {
           <span className={styles.logo}>Aurora</span>
           <ul className={styles.list}>
             {
-              getNames().map((item, index) => {
+              menus.map((item, index) => {
                 return (
-                  <li className={styles.list_item} key={index}>{item}</li>
+                  <li className={styles.list_item} key={index}>{item.title}</li>
                 )
               })
             }

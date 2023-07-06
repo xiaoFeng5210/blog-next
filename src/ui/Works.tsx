@@ -4,8 +4,9 @@ import styles from '../styles/common.module.scss'
 import '../styles/works.scss'
 import { bubbleList, d3Tabs } from '../local/baseData'
 import Bar from '../components/d3-chart/bar'
+import Surround from '~/components/d3-chart/Surround'
 
-const d3ChartComponents = [Bar]
+const visualizationComponents = [Surround]
 
 const Works: FC = () => {
   const [selectKey, setSelectKey] = useState(0)
@@ -48,7 +49,7 @@ const Works: FC = () => {
 }
 
 const switchComponent = (index: number, d3viewBox: { width: number, height: number }) => {
-  const Component = d3ChartComponents[index]
+  const Component = visualizationComponents[index]
   return Component ? <Component d3viewBox={d3viewBox} index={index} /> : <></>
 }
 

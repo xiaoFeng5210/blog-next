@@ -18,7 +18,7 @@ export const worksLocale = [
 
 export const d3Tabs = [
   {
-    title: '前端框架',
+    title: '前端技术',
     key: 0
   },
   {
@@ -89,4 +89,17 @@ export const bubbleList = [
     "text": '音频技术',
     "value": 5
   },
+]
+
+export const homepageSurround = [
+  'JavaScript',
+  'TypeScript',
+  'Vue',
+  'React',
+  'Node',
+  'NestJs',
+  'Vite',
+  'MySQL',
+  'threejs',
+  'canvas',
 ]

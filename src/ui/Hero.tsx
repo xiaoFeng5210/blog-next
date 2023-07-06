@@ -44,7 +44,7 @@ const Hero: NextPage = () => {
       <div className={styles.container}>
         <div className={heroStyles.left}>
           <span className={`${heroStyles.title} animate__animated animate__bounce`}>👋嗨, 我是张庆风</span>
-          <p className='animate__animated animate__backInLeft'>A front-end developer, good at vue3, react, threejs, canvas, loves front-end, likes to delve into new technologies, and tries to do and participate in some open source projects</p>
+          <p className='animate__animated animate__backInLeft text-[#394E6A]'>A front-end developer, good at vue3, react, threejs, canvas, loves front-end, likes to delve into new technologies, and tries to do and participate in some open source projects</p>
         </div>
         <div className={heroStyles.right}>
           <ThreeRender />

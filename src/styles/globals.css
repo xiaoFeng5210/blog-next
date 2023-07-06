@@ -105,6 +105,22 @@ a {
   }
 }
 
+::selection {
+  background:#84CC15; 
+  color:#555;
+}
+
+::-moz-selection {
+  background:#84CC15; 
+  color:#555;
+}
+
+::-webkit-selection {
+  background:#84CC15; 
+  color:#555;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

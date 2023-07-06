@@ -78,13 +78,16 @@ $animation-duration: 0.6s;
         display: block;
         width: 0;
         height: 2px;
-        background: #cc302b;
-        transition: width 0.3s;
+        background: #65A30C;
+        transition: all 0.3s;
       }
       &:hover {
+        color: #65A30C;
         &::after {
           width: 100%;
         }
+        // background: radial-gradient(#65A30C, white);
+        background: radial-gradient(120.25467895308827px circle at 102.859375px 39px, #65A30C 0%, transparent 65%)
       }
     }
   }
