@@ -3,7 +3,14 @@ import type { FC } from 'react'
 import './works-card.scss'
 import Image from 'next/image'
 
-const WorkCard: FC = () => {
+interface Props {
+  title: string
+  desc: string
+  img: string
+  id: string | number
+  href?: string
+}
+const WorkCard: FC<Props> = () => {
   return (
     <div className='card_box'>
       <div className='w-full h-[200px] image_box'>
