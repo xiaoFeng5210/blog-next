@@ -8,7 +8,7 @@ const WorkList: FC = () => {
   return (
     <main className=''>
       {
-        worksSetting.map((item, index) => <WorkCard key={item.id} {...item} />)
+        worksSetting.map((item) => <WorkCard key={item.id} {...item} />)
       }
     </main>
   )
