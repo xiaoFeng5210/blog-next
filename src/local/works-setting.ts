@@ -7,5 +7,12 @@ export const worksSetting: WorksSettings[] = [
     img: '/img/works/natrue.jpg',
     id: 0,
     type: WorksType.interactiveExperience,
+  },
+  {
+    title: '测试标题2',
+    desc: '测试描述，一些技术点摘要',
+    img: '/img/works/natrue.jpg',
+    id: 0,
+    type: WorksType.product,
   }
 ]
