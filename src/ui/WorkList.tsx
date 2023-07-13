@@ -1,16 +1,21 @@
 "use client"
-import type { FC } from 'react'
+import { FC, useEffect } from 'react'
 import '~/styles/workList.scss'
 import WorkCard from '~/components/works-card'
 import {worksSetting} from '~/local/works-setting'
+import { WorksSettings } from '~/types'
 
-const WorkList: FC = () => {
+interface Props {
+  currents: WorksSettings[]
+}
+const WorkList: FC<Props> = ({currents}) => {
+  
   return (
-    <main className=''>
+    <div className='main_list'>
       {
-        worksSetting.map((item) => <WorkCard key={item.id} {...item} />)
+        currents.map((item) => <WorkCard key={item.id} {...item} />)
       }
-    </main>
+    </div>
   )
 }
 export default WorkList
