@@ -1,9 +1,13 @@
+"use client"
 import { FC, useEffect } from 'react'
 const Watermark: FC = () => {
   let eleUploadFile: HTMLInputElement
   let eleImgCover: HTMLImageElement
   let eleImgUploadX: HTMLElement
   useEffect(() => {
+    eleUploadFile = document.getElementById('uploadFile') as HTMLInputElement
+    eleImgCover = document.getElementById('imgCover') as HTMLImageElement
+    eleImgUploadX = document.getElementById('imgUploadX') as HTMLElement
     eleUploadFile.addEventListener('change', function (e) {
       const reader = new FileReader()
       const file = (e.target as HTMLInputElement)?.files?.[0]
@@ -42,7 +46,7 @@ const Watermark: FC = () => {
     <div className='w-full h-full'>
       <input type="file" id="uploadFile" className='clip' accept="image/*" />
       <label className='ui-button ui-button-primary' htmlFor="uploadFile">选择图片</label>
-      <img id="imgCover" src="./watermark.png" className="clip"></img>
+      <img id="imgCover" src="/img/works/watermark.png" className="clip"></img>
       <p id="imgUploadX"></p>
     </div>
   )
