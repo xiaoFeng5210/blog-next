@@ -11,5 +11,11 @@ export interface WorksSettings {
   img: string
   id: string | number
   type: WorksType
-  href?: string
+  href?: WorksHrefEnum
 }
+
+export enum WorksHrefEnum {
+  watermark = 'watermark'
+}
+
+export type WorksHref = 'watermark'
