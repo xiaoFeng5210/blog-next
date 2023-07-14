@@ -43,7 +43,9 @@ const Watermark: FC = () => {
     imgUpload.src = url
   }
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center'>
+    <div className='w-full h-full flex flex-col items-center'>
+      <p className='text-2xl'>前端图片水印</p>
+      <div className="divider"></div>
       <input type="file" id="uploadFile" className='clip' accept="image/*" />
       {/* <label className='ui-button ui-button-primary' htmlFor="uploadFile">选择图片</label> */}
       <img id="imgCover" src="/img/works/watermark.png" className="clip"></img>
