@@ -47,7 +47,6 @@ const Watermark: FC = () => {
       <p className='text-2xl'>前端图片水印</p>
       <div className="divider"></div>
       <input type="file" id="uploadFile" className='clip' accept="image/*" />
-      {/* <label className='ui-button ui-button-primary' htmlFor="uploadFile">选择图片</label> */}
       <img id="imgCover" src="/img/works/watermark.png" className="clip"></img>
       <p id="imgUploadX"></p>
     </div>
