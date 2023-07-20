@@ -15,7 +15,9 @@ export interface WorksSettings {
 }
 
 export enum WorksHrefEnum {
-  watermark = 'watermark'
+  watermark = 'watermark',
+  // 渐变边框
+  gradientBorder = 'gradientBorder'
 }
 
 export type WorksHref = 'watermark'

@@ -1,5 +1,7 @@
 "use client"
 import { FC, useEffect } from 'react'
+import CoreContainer from '~/ui/CoreContainer'
+
 const Watermark: FC = () => {
   let eleUploadFile: HTMLInputElement
   let eleImgCover: HTMLImageElement
@@ -33,7 +35,7 @@ const Watermark: FC = () => {
     canvas.width = size
     canvas.height = size
     const context = canvas.getContext('2d')
-    const imgUpload =  new Image()
+    const imgUpload = new Image()
     imgUpload.onload = function () {
       context?.drawImage(imgUpload, 0, 0, size, size, 0, 0, size, size)
       // 绘制水印
@@ -43,13 +45,11 @@ const Watermark: FC = () => {
     imgUpload.src = url
   }
   return (
-    <div className='w-full h-full flex flex-col items-center'>
-      <p className='text-2xl'>前端图片水印</p>
-      <div className="divider"></div>
+    <CoreContainer title='前端图片水印'>
       <input type="file" id="uploadFile" className='clip' accept="image/*" />
       <img id="imgCover" src="/img/works/watermark.png" className="clip"></img>
       <p id="imgUploadX"></p>
-    </div>
+    </CoreContainer>
   )
 }
 export default Watermark

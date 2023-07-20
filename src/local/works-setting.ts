@@ -22,5 +22,13 @@ export const worksSetting: WorksSettings[] = [
     id: 1,
     type: WorksType.graphics,
     href: WorksHrefEnum.watermark
+  },
+  {
+    title: '渐变边框',
+    desc: '提升体验的样式',
+    img: '/img/works/渐变边框.png',
+    id: 2,
+    type: WorksType.interactiveExperience,
+    href: WorksHrefEnum.gradientBorder
   }
 ]
