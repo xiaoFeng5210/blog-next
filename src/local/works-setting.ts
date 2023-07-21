@@ -30,5 +30,13 @@ export const worksSetting: WorksSettings[] = [
     id: 2,
     type: WorksType.interactiveExperience,
     href: WorksHrefEnum.gradientBorder
+  },
+  {
+    title: 'CSS 实现多行文本“展开收起”',
+    desc: 'https://juejin.cn/post/6963904955262435336',
+    img: '',
+    id: 3,
+    type: WorksType.interactiveExperience,
+    href: WorksHrefEnum.textFold
   }
 ]
