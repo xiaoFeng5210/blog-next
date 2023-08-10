@@ -11,6 +11,8 @@ export const workShow = (id: number) => {
         return <Watermark />
       case WorksHrefEnum.gradientBorder:
         return <GradentBorder />
+      case WorksHrefEnum.textFold:
+        return   
       default:
         return <div>暂无</div>
     }    

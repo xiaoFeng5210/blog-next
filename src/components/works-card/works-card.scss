@@ -22,3 +22,13 @@
     box-sizing: border-box;
   }
 }
+
+.desc {
+  display: -webkit-box;
+  height: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  // 换行
+  word-wrap: normal;
+}

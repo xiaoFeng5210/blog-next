@@ -14,8 +14,7 @@ const WorksClient: FC = () => {
     setCurrentTab(tab)
   }
   function getTabs() {
-    const tabs = worksSetting.map(item => item.type)
-    return tabs
+    return [...new Set(worksSetting.map(item => item.type))]
   }
   useEffect(() => {
     setCurrents(worksSetting.filter(item => item.type === currentTab))

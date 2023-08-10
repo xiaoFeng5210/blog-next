@@ -18,7 +18,7 @@ const WorkCard: FC<Props> = (props) => {
       </div>
       <div className="content p-[16px] w-full h-full">
         <h3 className="text-[20px] font-bold text-[#11AFFA]">{title}</h3>
-        <p>{desc}</p>
+        <div className='desc'>{desc}</div>
       </div>
     </div>
     </Link>
