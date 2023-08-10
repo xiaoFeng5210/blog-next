@@ -1,0 +1,28 @@
+.text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+
+.text::before {
+  content: '';
+  float: right;
+  // height: calc(100% - 24px);
+  background-color: red;
+  margin-bottom: -24px;
+}
+
+.btntest {
+  float: right;
+  /*其他装饰样式*/
+  clear: both;
+  background-color: blueviolet;
+  color: white;
+  // padding-left: 3px;
+  // padding-right: 3px;
+  // border-radius: 5px;
+}
+
