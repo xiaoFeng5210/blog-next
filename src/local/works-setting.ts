@@ -20,7 +20,7 @@ export const worksSetting: WorksSettings[] = [
   {
     title: 'CSS 实现多行文本“展开收起”',
     desc: '多行文本展开收起',
-    img: '',
+    img: '/img/works/展开收起.png',
     id: 3,
     type: WorksType.interactiveExperience,
     href: WorksHrefEnum.textFold
@@ -28,7 +28,7 @@ export const worksSetting: WorksSettings[] = [
   {
     title: 'css3实现转盘抽奖',
     desc: '用css3实现一个转盘抽奖活动',
-    img: '/img/works/natrue.jpg',
+    img: '/img/works/转盘.png',
     id: 4,
     type: WorksType.interactiveExperience,
     href: WorksHrefEnum.rotateGame

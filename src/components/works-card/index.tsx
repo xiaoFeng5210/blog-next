@@ -14,7 +14,7 @@ const WorkCard: FC<Props> = (props) => {
     <Link href={`/works/${id}`}>
       <div className='card_box'>
       <div className='w-full h-[200px] image_box'>
-        <Image src={img} alt='test' fill={true} placeholder='blur' blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`} style={{ objectFit: "cover" }} />
+        <Image src={img} alt='test' fill={true} placeholder='blur' blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`} style={{ objectFit: "contain" }} />
       </div>
       <div className="content p-[16px] w-full h-full">
         <h3 className="text-[20px] font-bold text-[#11AFFA]">{title}</h3>
