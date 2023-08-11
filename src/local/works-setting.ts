@@ -25,12 +25,12 @@ export const worksSetting: WorksSettings[] = [
     type: WorksType.interactiveExperience,
     href: WorksHrefEnum.textFold
   },
-  // {
-  //   title: 'CSS 实现多行文本“展开收起”',
-  //   desc: 'https://juejin.cn/post/6963904955262435336',
-  //   img: '',
-  //   id: 3,
-  //   type: WorksType.interactiveExperience,
-  //   href: WorksHrefEnum.textFold
-  // }
+  {
+    title: 'css3实现转盘抽奖',
+    desc: '用css3实现一个转盘抽奖活动',
+    img: '/img/works/natrue.jpg',
+    id: 4,
+    type: WorksType.interactiveExperience,
+    href: WorksHrefEnum.rotateGame
+  }
 ]

@@ -19,7 +19,8 @@ export enum WorksHrefEnum {
   // 渐变边框
   gradientBorder = 'gradientBorder',
 
-  textFold = 'textFold'
+  textFold = 'textFold',
+  rotateGame = 'rotateGame'
 }
 
 export type WorksHref = 'watermark'

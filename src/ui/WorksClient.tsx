@@ -14,7 +14,13 @@ const WorksClient: FC = () => {
     setCurrentTab(tab)
   }
   function getTabs() {
-    return [...new Set(worksSetting.map(item => item.type))]
+    const arr = [...new Set(worksSetting.map(item => item.type))]
+    // 对arr进行排序, 我想把workssetting里最多的放在前面
+    return arr.sort((a, b) => {
+      const aCount = worksSetting.filter(item => item.type === a).length
+      const bCount = worksSetting.filter(item => item.type === b).length
+      return bCount - aCount
+    })
   }
   useEffect(() => {
     setCurrents(worksSetting.filter(item => item.type === currentTab))
