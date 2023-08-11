@@ -44,4 +44,12 @@
   height: 100%;
   position: relative;
   text-align: center;
+  .prize-item-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+  }
 }
