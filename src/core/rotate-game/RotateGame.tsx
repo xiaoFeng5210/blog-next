@@ -8,6 +8,9 @@ const RotateGame: FC = () => {
       <div className='flex justify-center'>
         <div className="wheel-wrapper">
           <div className="wheel-pointer">Start</div>
+          <div className="wheel-bg">
+            
+          </div>
         </div>
       </div>
     </CoreContainer>
