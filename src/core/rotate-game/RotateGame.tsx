@@ -19,9 +19,9 @@ const RotateGame: FC = () => {
                 prizeList.map((item, index) => {
                   return (
                     <div key={index} className="prize-item-wrapper">
-                      <div className="prize-item" style={{ transform: `rotate(${(360 / prizeList.length) * index}deg)` }}>
+                      <div className="prize-item flex flex-col items-center" style={{ transform: `rotate(${(360 / prizeList.length) * index}deg)` }}>
                         <div className="prize-name">{item.name}</div>
-                        <div className="prize-icon rounded overflow-hidden">
+                        <div className="prize-icon">
                           <img src={item.icon} />
                         </div>
                       </div>
