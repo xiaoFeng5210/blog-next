@@ -9,7 +9,9 @@ const RotateGame: FC = () => {
         <div className="wheel-wrapper">
           <div className="wheel-pointer">Start</div>
           <div className="wheel-bg">
-            
+            <div className="prize-list">
+              
+            </div>
           </div>
         </div>
       </div>
