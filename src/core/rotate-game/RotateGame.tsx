@@ -15,7 +15,7 @@ const RotateGame: FC = () => {
   const prizeNumber = prizeListOrigin.length
   const prizeList = useMemo(() => {
     return prizeListOrigin.slice(0, prizeNumber)
-  }, [prizeNumber])
+  }, [prizeNumber])  
   const roll = (result: number) => {
     setRolling(true)
     setWheelDeg(wheelDeg => (wheelDeg - (wheelDeg % 360) + 360 * 6 +
