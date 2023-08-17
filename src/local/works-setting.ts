@@ -32,5 +32,13 @@ export const worksSetting: WorksSettings[] = [
     id: 4,
     type: WorksType.interactiveExperience,
     href: WorksHrefEnum.rotateGame
+  },
+  {
+    title: 'threejs实现地球',
+    desc: 'threejs实现一个特效3d地球',
+    img: '',
+    id: 5,
+    type: WorksType.three,
+    href: WorksHrefEnum.earth
   }
 ]

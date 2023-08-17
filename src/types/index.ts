@@ -20,7 +20,9 @@ export enum WorksHrefEnum {
   gradientBorder = 'gradientBorder',
 
   textFold = 'textFold',
-  rotateGame = 'rotateGame'
+  rotateGame = 'rotateGame',
+  // 3d 地球
+  earth = "earth"
 }
 
 export type WorksHref = 'watermark'
