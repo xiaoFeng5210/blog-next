@@ -4,6 +4,6 @@
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "workbench.activityBar.visible": false,
   "editor.guides.bracketPairs": "active",
+  "workbench.activityBar.location": "side",
 }

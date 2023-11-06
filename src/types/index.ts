@@ -12,6 +12,7 @@ export interface WorksSettings {
   id: string | number
   type: WorksType
   href?: WorksHrefEnum
+
 }
 
 export enum WorksHrefEnum {
@@ -22,7 +23,9 @@ export enum WorksHrefEnum {
   textFold = 'textFold',
   rotateGame = 'rotateGame',
   // 3d 地球
-  earth = "earth"
+  earth = "earth",
+  // 人机验证
+  verify = 'verify'
 }
 
 export type WorksHref = 'watermark'

@@ -40,5 +40,13 @@ export const worksSetting: WorksSettings[] = [
     id: 5,
     type: WorksType.three,
     href: WorksHrefEnum.earth
+  },
+  {
+    title: '阿里人机验证',
+    desc: '阿里人机验证',
+    img: '',
+    id: 6,
+    type: WorksType.interactiveExperience,
+    href: WorksHrefEnum.verify
   }
 ]

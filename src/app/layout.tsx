@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import 'animate.css';
+import Script from 'next/script';
 
 export const metadata = {
   title: '个人博客',
@@ -13,6 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
+      <head>
+        {/* <Script src="https://g.alicdn.com/AWSC/AWSC/awsc.js"></Script> */}
+        <Script type="text/javascript" src="https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js"></Script>
+      </head>
       <body>
         {children}
       </body>

@@ -4,6 +4,7 @@ import { worksSetting } from "~/local/works-setting"
 import { WorksHrefEnum } from "~/types"
 import TextFold from "./text-fold/TextFold"
 import RotateGame from "./rotate-game/RotateGame"
+import VertifyAli from "./vertify"
 
 export const workShow = (id: number) => {
   const workOnlyOne = worksSetting.find((item) => item.id === id)
@@ -16,7 +17,9 @@ export const workShow = (id: number) => {
       case WorksHrefEnum.textFold:
         return <TextFold />
       case WorksHrefEnum.rotateGame:
-        return <RotateGame />  
+        return <RotateGame />
+      case WorksHrefEnum.verify:
+        return <VertifyAli />  
       default:
         return <div>暂无</div>
     }    
